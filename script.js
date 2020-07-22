@@ -12,13 +12,59 @@ function writePassword() {
 
 //prompt for password length
 var pwlength = prompt("How many characters would you like your new password to be? Pick a number 8 - 128.")
+
+//reassign pwlength to x for easier use in function
+  var x = pwlength
+  console.log(x)
+
+
 //prompt for uppercase letters
 var uppercase = confirm("Would you like uppercase letters?")
+console.log(uppercase)
+
 //promt for lowercase letters
 var lowercase = confirm("Would you like lowercase letters?")
+console.log(lowercase)
+
 //prompt for numbers
 var nums = confirm("Would you like numbers?")
+console.log(nums)
+
 //prompt for special characters
 var spchar = confirm("Would you like special characters?")
+console.log(spchar)
+
+//establishes variable to store selected characters
+var characters = "";
+
+//if user selects uppercase letters, adds uppercase letters to characters variable
+if(uppercase === true){
+  characters += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+}
+
+//if user selects lowercase letters, adds lowercase letter to characters variable
+if(lowercase === true){
+  characters += "abcdefghijklmnopqrstuvwxyz"
+}
+
+//if user selects numbers, adds numbers to characters variable
+if(nums === true){
+  characters += "0123456789"
+}
+
+//if uer selects special characters, adds special characters to characters variable
+if(spchar === true){
+  characters +=  "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+}
+console.log(characters)
+
+
+
+
+
+
+
+
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
