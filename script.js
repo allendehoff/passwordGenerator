@@ -58,7 +58,11 @@ if(spchar === true){
 }
 console.log(characters)
 
+for (var i=0; i < x; i++){
+  var randomCharacters = characters.charAt(Math.floor(Math.random() * characters.length))
+}
 
+console.log(randomCharacters)
 
 
 
