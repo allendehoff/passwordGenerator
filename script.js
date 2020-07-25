@@ -12,9 +12,10 @@ function writePassword() {
 
 //prompt for password length
 var pwlength = prompt("How many characters would you like your new password to be? Pick a number 8 - 128.")
+console.log(pwlength)
 
 //reassign pwlength to x for easier use in function
-  var x = pwlength
+  var x = parseInt(pwlength)
   console.log(x)
 
 
@@ -58,9 +59,23 @@ if(spchar === true){
 }
 console.log(characters)
 
-for (var i=0; i < x; i++){
-  var randomCharacters = characters.charAt(Math.floor(Math.random() * characters.length))
+
+// function random(){
+//   characters.charAt(Math.floor(Math.random() * characters.length))
+// }
+
+var randomCharacters = ""
+
+for (var i = 0; i <= x; i++){
+  randomCharacters += characters.charAt(Math.floor(Math.random() * characters.length))
 }
+
+
+// var randomCharacters = 
+// randomCharacters.repeat(pwlength)
+
+
+
 
 console.log(randomCharacters)
 
