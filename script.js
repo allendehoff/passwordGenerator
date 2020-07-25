@@ -9,10 +9,15 @@ function writePassword() {
 var pwlength = prompt("How many characters would you like your new password to be? Pick a number 8 - 128.")
 console.log(pwlength)
 
+
 //reassign pwlength to x for easier use in function
   var x = parseInt(pwlength)
   console.log(x)
 
+if (x === NaN || x < 8 || x > 128){
+  alert("Your password needs to be 8 - 128 charaters. Please select OK and press the 'Generate Password' button again.")
+}
+else {
 
 //prompt for uppercase letters
 var uppercase = confirm("Would you like uppercase letters?")
@@ -72,6 +77,8 @@ console.log(randomCharacters)
 
   passwordText.value = randomCharacters;
 }
+}
+
 
 
 // //prompt for password length
